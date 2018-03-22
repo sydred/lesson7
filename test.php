@@ -6,7 +6,7 @@ if (!isset($_GET['number'])) {
 }
 
 if (!isset(glob('tests/*.json')[$_GET['number']])) {
-    header('HTTP/1.0 404 Not Found');
+    header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
     exit;
 }
 
